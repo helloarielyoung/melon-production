@@ -31,6 +31,15 @@ class Melon(object):
                                              self.weight,
                                              self.melon_type)
 
+
 # FIXME: Add Squash class definition here.
 class Squash(Melon):
-    pass
+    #don't think i need a separate __init__
+
+    def prep(self):
+        """Prepare and paint the squashes"""
+        #run the usual prep for a melon
+        super(Squash, self).prep()
+
+        #then run additional paint steps
+        robots.painterbot.paint(self)
